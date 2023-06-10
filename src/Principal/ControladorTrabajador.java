@@ -10,6 +10,9 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -19,6 +22,7 @@ public class ControladorTrabajador {
   String adminContra ="5";
    static ArrayList<Trabajador> listTrabajadores;
 private static final String ARCHIVO_REGISTRO = "datosTrabajadores.txt";
+//private static final String ARCHIVO_ASISTENCIA = "AsistenciaTrabajadores.txt";
     public ControladorTrabajador() {
     }
     public void crearArraylist(){
@@ -95,6 +99,16 @@ return t;
  }
         return null;
  }
+ public int obtentenerDni(){
+ for(int i = 0; i < listTrabajadores.size();i++){
+ Trabajador tra = listTrabajadores.get(i);
+ if(tra!= null){
+ return tra.dni;
+ }
+ }
+      return 0;
+ }
+ 
  public boolean inicioSesionAdmin(String user, String c){
  Administrador ad = new Administrador(adminUser, adminContra);
 if(ad !=null && ad.getUserAdmin().equals(user) && ad.getUserContra().equals(c)){
@@ -132,6 +146,35 @@ return false;
         return false; 
     }
 
+    public int obtenerCantidadAsistencias(int dni) {
+        Trabajador trabajador = buscarTrabajador(dni);
+        if (trabajador != null) {
+            return trabajador.obtenerCantidadAsistencias();
+        }
+        return 0;
+    }
 
+    public int obtenerCantidadInasistencias(int dni) {
+        Trabajador trabajador = buscarTrabajador(dni);
+        if (trabajador != null) {
+            return trabajador.obtenerCantidadInasistencias();
+        }
+        return 0;
+    }
+    
+        public void marcarAsistencia(int dni) {
+        Trabajador trabajador = buscarTrabajador(dni);
+        if (trabajador != null) {
+            String fechaActual = trabajador.obtenerFechaActual();
+            if (trabajador.getAsistencias().contains(fechaActual)) {
+                JOptionPane.showMessageDialog(null, "No puedes marcar más de una vez tu asistencia");
+            } else {
+                trabajador.getAsistencias().add(fechaActual);
+                guardarDatosEnArchivo(ARCHIVO_REGISTRO);
+                JOptionPane.showMessageDialog(null, "Asistencia marcada correctamente");
+            }
+        } 
+    }
+      
 }
 

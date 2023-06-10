@@ -1,5 +1,10 @@
 package Principal;
 
+import java.awt.List;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+
 public class Trabajador {
     protected String nombre;
     protected int dni;
@@ -8,7 +13,9 @@ public class Trabajador {
     protected String user;
     protected String contra;
     protected String estadoCivil;
-
+    private ArrayList<String> asistencias;
+        private ArrayList<String> ausencias;
+    //private List<String> ausencias;
     public Trabajador(String nombre, int dni, int numeroTe, String puestoT, String user, String contra, String estadoCivil) {
         this.nombre = nombre;
         this.dni = dni;
@@ -17,8 +24,21 @@ public class Trabajador {
         this.user = user;
         this.contra = contra;
         this.estadoCivil = estadoCivil;
+        asistencias = new ArrayList<>();
+        ausencias = new ArrayList<>();
     }
 
+        public void marcarAsistencia() {
+        String fechaActual = obtenerFechaActual(); // Obtener la fecha actual en el formato deseado
+        asistencias.add(fechaActual);
+    }
+        public String obtenerFechaActual(){
+          LocalDate fechaActual = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        return fechaActual.format(formatter);
+        }
+    
+    
     public Trabajador(String user, String contra) {
         this.user = user;
         this.contra = contra;
@@ -79,11 +99,29 @@ public class Trabajador {
     public void setEstadoCivil(String estadoCivil) {
         this.estadoCivil = estadoCivil;
     }
+    public int obtenerCantidadAsistencias() {
+        return asistencias.size();
+    }
 
+    public int obtenerCantidadInasistencias() {
+        int totalDiasLaborables = 30; // Debes establecer el valor correcto del total de días laborables
+        int asistencia = asistencias.size();
+        int inasistencias = totalDiasLaborables - asistencia;
+        return inasistencias;
+    }
+    
+    public ArrayList<String> getAsistencias() {
+        return asistencias;
+    }
+
+    public ArrayList<String> getAusencias() {
+        return ausencias;
+    }
+    
     
     @Override
     public String toString() {
-        return   user + " - " + contra+ " - "  + numeroTe+ " - " + puestoT + " - " + nombre + " - "  + dni;
+        return   user + " - " + contra+ " - "  + numeroTe+ " - " + puestoT + " - " + nombre + " - "  + dni + " - " + getAsistencias() + " - " + getAusencias();
     }
 
 
