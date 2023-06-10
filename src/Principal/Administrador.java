@@ -29,7 +29,6 @@ String userContra;
     public void setUserContra(String userContra) {
         this.userContra = userContra;
     }
-
-
+//Agregar comentario
     
 }
