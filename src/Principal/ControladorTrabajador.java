@@ -90,15 +90,27 @@ return t;
         return false;
  }
 
- public Trabajador eliminarTrabajador(int dni){
- for(int i = 0; i < listTrabajadores.size();i++){
- Trabajador traba = listTrabajadores.get(i);
- if(traba.getDni() == dni){
- listTrabajadores.remove(i);
- }
- }
-        return null;
- }
+// public Trabajador eliminarTrabajador(int dni){
+// for(int i = 0; i < listTrabajadores.size();i++){
+// Trabajador traba = listTrabajadores.get(i);
+// if(traba.getDni() == dni){
+// listTrabajadores.remove(i);
+// }
+// }
+//        return null;
+// }
+   public Trabajador eliminarTrabajador(int dni) {
+    Trabajador trabajadorEliminado = null;
+    for (int i = 0; i < listTrabajadores.size(); i++) {
+        Trabajador traba = listTrabajadores.get(i);
+        if (traba.getDni() == dni) {
+            trabajadorEliminado = listTrabajadores.remove(i);
+            break;
+        }
+    }
+    guardarDatosEnArchivo(ARCHIVO_REGISTRO);
+    return trabajadorEliminado;
+}
  public int obtentenerDni(){
  for(int i = 0; i < listTrabajadores.size();i++){
  Trabajador tra = listTrabajadores.get(i);
