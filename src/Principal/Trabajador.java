@@ -14,7 +14,7 @@ public class Trabajador {
     protected String contra;
     protected String estadoCivil;
     private ArrayList<String> asistencias;
-        private ArrayList<String> ausencias;
+    private ArrayList<String> ausencias;
     //private List<String> ausencias;
     public Trabajador(String nombre, int dni, int numeroTe, String puestoT, String user, String contra, String estadoCivil) {
         this.nombre = nombre;
@@ -28,6 +28,13 @@ public class Trabajador {
         ausencias = new ArrayList<>();
     }
 
+    public Trabajador(int dni, ArrayList<String> asistencias) {
+        this.dni = dni;
+        this.asistencias = asistencias;
+    }
+
+    
+    
         public void marcarAsistencia() {
         String fechaActual = obtenerFechaActual(); // Obtener la fecha actual en el formato deseado
         asistencias.add(fechaActual);

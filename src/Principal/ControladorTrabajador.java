@@ -22,6 +22,7 @@ public class ControladorTrabajador {
   String adminContra ="5";
    static ArrayList<Trabajador> listTrabajadores;
 private static final String ARCHIVO_REGISTRO = "datosTrabajadores.txt";
+private static final String ARCHIVO_REGISTRo_ASISTENCIA = "asitenciaTrabajadores.txt";
 //private static final String ARCHIVO_ASISTENCIA = "AsistenciaTrabajadores.txt";
     public ControladorTrabajador() {
     }
@@ -187,6 +188,8 @@ return false;
             }
         } 
     }
+        
+        
       
 }
 

@@ -20,7 +20,7 @@ public class VtnAdministrador extends javax.swing.JFrame {
     private void initComponents() {
 
         btnSalir = new javax.swing.JButton();
-        lbFondo = new javax.swing.JLabel();
+        btnEliminarTrabajador = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -33,8 +33,13 @@ public class VtnAdministrador extends javax.swing.JFrame {
         });
         getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 240, 50));
 
-        lbFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Admin.png"))); // NOI18N
-        getContentPane().add(lbFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 430));
+        btnEliminarTrabajador.setText("Eliminar");
+        btnEliminarTrabajador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarTrabajadorActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnEliminarTrabajador, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 250, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -42,6 +47,11 @@ public class VtnAdministrador extends javax.swing.JFrame {
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnEliminarTrabajadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarTrabajadorActionPerformed
+        JOptionPane.showMessageDialog(null, "Eliminado Correctamente");
+        controlador.eliminarTrabajador(2);
+    }//GEN-LAST:event_btnEliminarTrabajadorActionPerformed
 
 
     public static void main(String args[]) {
@@ -61,7 +71,7 @@ public class VtnAdministrador extends javax.swing.JFrame {
         btnSalir.setBorderPainted(false);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEliminarTrabajador;
     private javax.swing.JButton btnSalir;
-    private javax.swing.JLabel lbFondo;
     // End of variables declaration//GEN-END:variables
 }
