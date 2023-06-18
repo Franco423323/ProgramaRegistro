@@ -121,7 +121,24 @@ return t;
  }
       return 0;
  }
- 
+  public String obtentenerNombre(){
+ for(int i = 0; i < listTrabajadores.size();i++){
+ Trabajador tra = listTrabajadores.get(i);
+ if(tra!= null){
+ return tra.nombre;
+ }
+ }
+      return "";
+ }
+    public String obtentenerPuesto(){
+ for(int i = 0; i < listTrabajadores.size();i++){
+ Trabajador tra = listTrabajadores.get(i);
+ if(tra!= null){
+ return tra.puestoT;
+ }
+ }
+      return "";
+ }
  public boolean inicioSesionAdmin(String user, String c){
  Administrador ad = new Administrador(adminUser, adminContra);
 if(ad !=null && ad.getUserAdmin().equals(user) && ad.getUserContra().equals(c)){

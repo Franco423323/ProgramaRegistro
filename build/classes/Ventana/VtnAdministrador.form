@@ -130,9 +130,6 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lbNombre">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Franco Aldair"/>
-      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="130" y="140" width="90" height="50"/>
@@ -140,9 +137,6 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lbDni">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="43138294"/>
-      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="230" y="140" width="90" height="50"/>
@@ -150,9 +144,6 @@
       </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lbPuesto">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Cajero"/>
-      </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="330" y="140" width="110" height="40"/>

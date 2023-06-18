@@ -11,6 +11,10 @@ public class VtnAdministrador extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.controlador = controlador;
+        //controlador.obtentenerDni();
+        lbNombre.setText(controlador.obtentenerNombre());
+        lbDni.setText(String.valueOf(controlador.obtentenerDni()));
+        lbPuesto.setText(controlador.obtentenerPuesto());
         botonTransparente();
     }
 
@@ -77,14 +81,8 @@ public class VtnAdministrador extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/trabajador (1).png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 60, 90));
-
-        lbNombre.setText("Franco Aldair");
         getContentPane().add(lbNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 90, 50));
-
-        lbDni.setText("43138294");
         getContentPane().add(lbDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 90, 50));
-
-        lbPuesto.setText("Cajero");
         getContentPane().add(lbPuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 110, 40));
 
         pack();
@@ -96,7 +94,7 @@ public class VtnAdministrador extends javax.swing.JFrame {
 
     private void btnEliminarTrabajadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarTrabajadorActionPerformed
         JOptionPane.showMessageDialog(null, "Eliminado Correctamente");
-        controlador.eliminarTrabajador(2);
+        controlador.eliminarTrabajador(controlador.obtentenerDni());
     }//GEN-LAST:event_btnEliminarTrabajadorActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
