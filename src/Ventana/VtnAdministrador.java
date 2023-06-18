@@ -66,7 +66,7 @@ public class VtnAdministrador extends javax.swing.JFrame {
         getContentPane().add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 70, 40));
 
         jButton2.setText("Ver");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 140, 70, 40));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 140, 70, 40));
 
         jButton3.setText("Pagos");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +74,7 @@ public class VtnAdministrador extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 140, 60, 40));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 140, 60, 40));
 
         jLabel1.setText("Nombre");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 70, 40));
