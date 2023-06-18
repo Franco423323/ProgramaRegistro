@@ -2,6 +2,7 @@
 package Ventana;
 
 import Principal.ControladorTrabajador;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class VtnAdministrador extends javax.swing.JFrame {
@@ -25,7 +26,7 @@ public class VtnAdministrador extends javax.swing.JFrame {
 
         btnSalir = new javax.swing.JButton();
         btnEliminarTrabajador = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnEditar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -56,8 +57,13 @@ public class VtnAdministrador extends javax.swing.JFrame {
         });
         getContentPane().add(btnEliminarTrabajador, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 70, 40));
 
-        jButton1.setText("Editar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 70, 40));
+        btnEditar.setText("Editar");
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 70, 40));
 
         jButton2.setText("Ver");
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 140, 70, 40));
@@ -101,6 +107,13 @@ public class VtnAdministrador extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingresa el nombre a editar:");
+        String nuevoN = sc.nextLine();
+        controlador.editarNombreTrabajador(controlador.obtentenerDni(), nuevoN);
+    }//GEN-LAST:event_btnEditarActionPerformed
+
 
     public static void main(String args[]) {
 
@@ -119,9 +132,9 @@ public class VtnAdministrador extends javax.swing.JFrame {
         btnSalir.setBorderPainted(false);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminarTrabajador;
     private javax.swing.JButton btnSalir;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;

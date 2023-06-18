@@ -139,6 +139,7 @@ return t;
  }
       return "";
  }
+
  public boolean inicioSesionAdmin(String user, String c){
  Administrador ad = new Administrador(adminUser, adminContra);
 if(ad !=null && ad.getUserAdmin().equals(user) && ad.getUserContra().equals(c)){
@@ -205,7 +206,15 @@ return false;
             }
         } 
     }
-        
+     public void editarNombreTrabajador(int dni, String nuevoNombre) {
+    for (Trabajador trabajador : listTrabajadores) {
+        if (trabajador.getDni() == dni) {
+            trabajador.setNombre(nuevoNombre);
+            break;
+        }
+    }
+    guardarDatosEnArchivo(ARCHIVO_REGISTRO); // Guardar los cambios en el archivo
+}   
         
       
 }
