@@ -28,7 +28,6 @@ public class VtnAdministrador extends javax.swing.JFrame {
         btnEliminarTrabajador = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -47,7 +46,7 @@ public class VtnAdministrador extends javax.swing.JFrame {
                 btnSalirActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 390, 70, 20));
+        getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 360, 70, 20));
 
         btnEliminarTrabajador.setText("Eliminar");
         btnEliminarTrabajador.addActionListener(new java.awt.event.ActionListener() {
@@ -55,7 +54,7 @@ public class VtnAdministrador extends javax.swing.JFrame {
                 btnEliminarTrabajadorActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEliminarTrabajador, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 70, 40));
+        getContentPane().add(btnEliminarTrabajador, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 70, 40));
 
         btnEditar.setText("Editar");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -63,33 +62,25 @@ public class VtnAdministrador extends javax.swing.JFrame {
                 btnEditarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 70, 40));
+        getContentPane().add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 70, 40));
 
         jButton2.setText("Ver");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 140, 70, 40));
-
-        jButton3.setText("Pagos");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 140, 60, 40));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, 70, 40));
 
         jLabel1.setText("Nombre");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 60, 70, 40));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 70, 40));
 
         jLabel2.setText("Dni");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, 40, 20));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 40, 20));
 
         jLabel3.setText("Puesto de trabajo");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/trabajador (1).png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 60, 90));
-        getContentPane().add(lbNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 90, 50));
-        getContentPane().add(lbDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 90, 50));
-        getContentPane().add(lbPuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 110, 40));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 60, 90));
+        getContentPane().add(lbNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 90, 50));
+        getContentPane().add(lbDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 90, 50));
+        getContentPane().add(lbPuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 110, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -102,10 +93,6 @@ public class VtnAdministrador extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Eliminado Correctamente");
         controlador.eliminarTrabajador(controlador.obtentenerDni());
     }//GEN-LAST:event_btnEliminarTrabajadorActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         Scanner sc = new Scanner(System.in);
@@ -136,7 +123,6 @@ public class VtnAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton btnEliminarTrabajador;
     private javax.swing.JButton btnSalir;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

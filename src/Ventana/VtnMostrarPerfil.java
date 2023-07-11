@@ -1,4 +1,3 @@
-
 package Ventana;
 
 import Principal.ControladorTrabajador;
@@ -6,15 +5,15 @@ import Principal.Trabajador;
 
 public class VtnMostrarPerfil extends javax.swing.JFrame {
 
-ControladorTrabajador controlador;
+    ControladorTrabajador controlador;
+
     public VtnMostrarPerfil(ControladorTrabajador controlador) {
         initComponents();
         this.controlador = controlador;
         this.setLocationRelativeTo(null);
-      
-  
-    }
+        btnTransparente();
 
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -22,65 +21,61 @@ ControladorTrabajador controlador;
 
         lbMsj = new javax.swing.JLabel();
         btnAsistencia = new javax.swing.JButton();
-        btnAsistencias = new javax.swing.JButton();
-        btnInasistencias = new javax.swing.JButton();
+        btnHistorial = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
         lbFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(lbMsj, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 29, 147, 26));
 
-        btnAsistencia.setText("Asistencia");
+        btnAsistencia.setOpaque(false);
         btnAsistencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAsistenciaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAsistencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 90, 40));
+        getContentPane().add(btnAsistencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 120, 30));
 
-        btnAsistencias.setText("Ver asistencias");
-        btnAsistencias.addActionListener(new java.awt.event.ActionListener() {
+        btnHistorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAsistenciasActionPerformed(evt);
+                btnHistorialActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAsistencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+        getContentPane().add(btnHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 120, 30));
+        getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 110, 30));
 
-        btnInasistencias.setText("Ver inasistencias");
-        btnInasistencias.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInasistenciasActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnInasistencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
-
-        lbFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/PerfilTrabajador.png"))); // NOI18N
+        lbFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Traba.png"))); // NOI18N
         lbFondo.setText("jLabel1");
-        getContentPane().add(lbFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 543, 360));
+        getContentPane().add(lbFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAsistenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsistenciaActionPerformed
-   //controlador
-        controlador.marcarAsistencia(obtenerMiDni());
-       // btnAsistencia.setVisible(false);
+controlador.marcarAsistencia(obtenerMiDni());
+
     }//GEN-LAST:event_btnAsistenciaActionPerformed
 
-    private void btnInasistenciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInasistenciasActionPerformed
-        System.out.println("Numero de inasistencias: " + controlador.obtenerCantidadInasistencias(obtenerMiDni()) );
-        
-        //controlador.obtenerCantidadInasistencias(obtenerMiDni());
-    }//GEN-LAST:event_btnInasistenciasActionPerformed
+    private void btnHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHistorialActionPerformed
 
-    private void btnAsistenciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsistenciasActionPerformed
-   //controlador.obtenerCantidadAsistencias(obtenerMiDni());
-   System.out.println("Numero de asistencias: " + controlador.obtenerCantidadAsistencias(obtenerMiDni()) );
-    }//GEN-LAST:event_btnAsistenciasActionPerformed
- public int obtenerMiDni(){
- return controlador.obtentenerDni();
- }
- 
+    }//GEN-LAST:event_btnHistorialActionPerformed
+    public int obtenerMiDni() {
+        return controlador.obtentenerDni();
+    }
+
+    public void btnTransparente() {
+        btnAsistencia.setOpaque(false);
+        btnAsistencia.setContentAreaFilled(false);
+        btnAsistencia.setBorderPainted(false);
+        btnHistorial.setOpaque(false);
+        btnHistorial.setContentAreaFilled(false);
+        btnHistorial.setBorderPainted(false);
+        btnSalir.setOpaque(false);
+        btnSalir.setContentAreaFilled(false);
+        btnSalir.setBorderPainted(false);
+    }
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -92,8 +87,8 @@ ControladorTrabajador controlador;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAsistencia;
-    private javax.swing.JButton btnAsistencias;
-    private javax.swing.JButton btnInasistencias;
+    private javax.swing.JButton btnHistorial;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JLabel lbFondo;
     private javax.swing.JLabel lbMsj;
     // End of variables declaration//GEN-END:variables

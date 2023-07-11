@@ -32,6 +32,7 @@ public class VtnRegistrar extends javax.swing.JFrame {
         txtContra = new javax.swing.JTextField();
         btnIniciarSesion = new javax.swing.JButton();
         cboEstado = new javax.swing.JComboBox<>();
+        btnSalir = new javax.swing.JButton();
         lbFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,15 +45,20 @@ public class VtnRegistrar extends javax.swing.JFrame {
                 btnRegistrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 470, 170, 40));
+        getContentPane().add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 470, 110, 30));
 
         txtNumero.setFont(new java.awt.Font("DialogInput", 0, 18)); // NOI18N
+        txtNumero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNumeroActionPerformed(evt);
+            }
+        });
         txtNumero.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtNumeroKeyTyped(evt);
             }
         });
-        getContentPane().add(txtNumero, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 160, 30));
+        getContentPane().add(txtNumero, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 180, 40));
 
         txtNombre.setFont(new java.awt.Font("DialogInput", 0, 18)); // NOI18N
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +71,7 @@ public class VtnRegistrar extends javax.swing.JFrame {
                 txtNombreKeyTyped(evt);
             }
         });
-        getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 160, 30));
+        getContentPane().add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 180, 40));
 
         txtDni.setFont(new java.awt.Font("DialogInput", 0, 18)); // NOI18N
         txtDni.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -73,14 +79,14 @@ public class VtnRegistrar extends javax.swing.JFrame {
                 txtDniKeyTyped(evt);
             }
         });
-        getContentPane().add(txtDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 154, 160, 30));
+        getContentPane().add(txtDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 137, 180, -1));
 
         cbPuesto.setFont(new java.awt.Font("DialogInput", 0, 18)); // NOI18N
         cbPuesto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Supervisor", "Cajero", "Atención al Cliente" }));
-        getContentPane().add(cbPuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 286, 160, 30));
+        getContentPane().add(cbPuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 180, -1));
 
         txtUser.setFont(new java.awt.Font("DialogInput", 0, 18)); // NOI18N
-        getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 330, 160, 30));
+        getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 330, 180, 40));
 
         txtContra.setFont(new java.awt.Font("DialogInput", 0, 18)); // NOI18N
         txtContra.addActionListener(new java.awt.event.ActionListener() {
@@ -88,7 +94,7 @@ public class VtnRegistrar extends javax.swing.JFrame {
                 txtContraActionPerformed(evt);
             }
         });
-        getContentPane().add(txtContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 160, 30));
+        getContentPane().add(txtContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 190, 40));
 
         btnIniciarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIniciarSesion.addActionListener(new java.awt.event.ActionListener() {
@@ -96,13 +102,25 @@ public class VtnRegistrar extends javax.swing.JFrame {
                 btnIniciarSesionActionPerformed(evt);
             }
         });
-        getContentPane().add(btnIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 170, 40));
+        getContentPane().add(btnIniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 90, 30));
 
         cboEstado.setFont(new java.awt.Font("DialogInput", 0, 18)); // NOI18N
         cboEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Soltero(a)", "Casado(a)", "Viudo(a)", "Divorciado(a)" }));
-        getContentPane().add(cboEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 160, 30));
+        cboEstado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboEstadoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cboEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 180, 40));
 
-        lbFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Registrar.png"))); // NOI18N
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, 120, 30));
+
+        lbFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/registoOfff.png"))); // NOI18N
         getContentPane().add(lbFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 520));
 
         pack();
@@ -182,6 +200,9 @@ public class VtnRegistrar extends javax.swing.JFrame {
         btnIniciarSesion.setOpaque(false);
         btnIniciarSesion.setContentAreaFilled(false);
         btnIniciarSesion.setBorderPainted(false);
+               btnSalir.setOpaque(false);
+        btnSalir.setContentAreaFilled(false);
+        btnSalir.setBorderPainted(false);
     }
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
 
@@ -191,6 +212,18 @@ public class VtnRegistrar extends javax.swing.JFrame {
     private void txtContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtContraActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void cboEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboEstadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboEstadoActionPerformed
+
+    private void txtNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumeroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNumeroActionPerformed
 
     public static void main(String args[]) {
 
@@ -212,6 +245,7 @@ public class VtnRegistrar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIniciarSesion;
     private javax.swing.JButton btnRegistrar;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JComboBox<String> cbPuesto;
     private javax.swing.JComboBox<String> cboEstado;
     private javax.swing.JLabel lbFondo;
