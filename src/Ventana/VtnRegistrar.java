@@ -15,8 +15,6 @@ public class VtnRegistrar extends javax.swing.JFrame {
         controladorTrabajador = new ControladorTrabajador();
         controladorTrabajador.crearArraylist();
         botonTransparente();
-
-
     }
 
     @SuppressWarnings("unchecked")
@@ -224,7 +222,9 @@ public class VtnRegistrar extends javax.swing.JFrame {
     private void txtNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumeroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNumeroActionPerformed
-
+    public int obtenerDni() {
+        return controladorTrabajador.obtentenerDni();
+    }
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {

@@ -4,9 +4,7 @@ import Principal.ControladorTrabajador;
 import Principal.Trabajador;
 
 public class VtnMostrarPerfil extends javax.swing.JFrame {
-
     ControladorTrabajador controlador;
-
     public VtnMostrarPerfil(ControladorTrabajador controlador) {
         initComponents();
         this.controlador = controlador;
@@ -29,7 +27,6 @@ public class VtnMostrarPerfil extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(lbMsj, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 29, 147, 26));
 
-        btnAsistencia.setOpaque(false);
         btnAsistencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAsistenciaActionPerformed(evt);
