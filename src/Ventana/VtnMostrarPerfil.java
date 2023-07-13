@@ -42,9 +42,9 @@ public class VtnMostrarPerfil extends javax.swing.JFrame {
         getContentPane().add(btnHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 120, 30));
         getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 380, 110, 30));
 
-        lbFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Traba.png"))); // NOI18N
+        lbFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoTraba.png"))); // NOI18N
         lbFondo.setText("jLabel1");
-        getContentPane().add(lbFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 430, 490));
+        getContentPane().add(lbFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

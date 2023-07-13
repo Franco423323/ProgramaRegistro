@@ -22,8 +22,7 @@ public class ControladorTrabajador {
   String adminContra ="5";
    static ArrayList<Trabajador> listTrabajadores;
 private static final String ARCHIVO_REGISTRO = "datosTrabajadores.txt";
-private static final String ARCHIVO_REGISTRo_ASISTENCIA = "asitenciaTrabajadores.txt";
-//private static final String ARCHIVO_ASISTENCIA = "AsistenciaTrabajadores.txt";
+
     public ControladorTrabajador() {
     }
     public void crearArraylist(){
@@ -177,21 +176,6 @@ return false;
         return false; 
     }
 
-    public int obtenerCantidadAsistencias(int dni) {
-        Trabajador trabajador = buscarTrabajador(dni);
-        if (trabajador != null) {
-            return trabajador.obtenerCantidadAsistencias();
-        }
-        return 0;
-    }
-
-    public int obtenerCantidadInasistencias(int dni) {
-        Trabajador trabajador = buscarTrabajador(dni);
-        if (trabajador != null) {
-            return trabajador.obtenerCantidadInasistencias();
-        }
-        return 0;
-    }
     
         public void marcarAsistencia(int dni) {
         Trabajador trabajador = buscarTrabajador(dni);

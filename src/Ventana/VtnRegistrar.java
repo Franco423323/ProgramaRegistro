@@ -118,7 +118,7 @@ public class VtnRegistrar extends javax.swing.JFrame {
         });
         getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 470, 120, 30));
 
-        lbFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/registoOfff.png"))); // NOI18N
+        lbFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoRegistro.png"))); // NOI18N
         getContentPane().add(lbFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 520));
 
         pack();
@@ -222,9 +222,7 @@ public class VtnRegistrar extends javax.swing.JFrame {
     private void txtNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumeroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNumeroActionPerformed
-    public int obtenerDni() {
-        return controladorTrabajador.obtentenerDni();
-    }
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {

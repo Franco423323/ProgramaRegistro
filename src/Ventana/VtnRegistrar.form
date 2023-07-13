@@ -193,7 +193,7 @@
     <Component class="javax.swing.JLabel" name="lbFondo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Imagenes/registoOfff.png"/>
+          <Image iconType="3" name="/Imagenes/fondoRegistro.png"/>
         </Property>
       </Properties>
       <Constraints>

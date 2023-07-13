@@ -75,11 +75,11 @@ Desktop desktop = Desktop.getDesktop();
         getContentPane().add(lbDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 70, 40));
 
         lbNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lbNombre.setText("Jose");
-        getContentPane().add(lbNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 40, 20));
+        lbNombre.setText("Luis");
+        getContentPane().add(lbNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 80, 20));
 
         lbTelef.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lbTelef.setText("971728304");
+        lbTelef.setText("975941009");
         getContentPane().add(lbTelef, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, -1, -1));
 
         lbPuestp.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -99,8 +99,13 @@ Desktop desktop = Desktop.getDesktop();
     private void btnEliminarTrabajadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarTrabajadorActionPerformed
 int dni = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el dni del trabajador a eliminar"));
 controlador.eliminarTrabajador(dni);
+if(dni!=0){
+    lbDni.setText("");
+    lbNombre.setText("");
+    lbPuestp.setText("");
+    lbTelef.setText("");
 JOptionPane.showMessageDialog(null, "Eliminado correctamente");
-        
+}
     }//GEN-LAST:event_btnEliminarTrabajadorActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
@@ -153,9 +158,7 @@ JOptionPane.showMessageDialog(null, "Nombre cambiado perfectamente");
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } else {
-            System.out.println("No se puede abrir el archivo Excel.");
-        }
+        } 
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
